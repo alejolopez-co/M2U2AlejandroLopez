@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Algoritmos Módulo 2: Pensamiento lógico y algorítmico</h2>
+    <p>Click sobre los botones dentro del menu con pestañas:</p>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openMenu(event, 'Algoritmo1')">Calcular valor total materias</button>
+        <button class="tablinks" onclick="openMenu(event, 'Algoritmo2')" id="defaultOpen">Calcular valor mayor y menor</button>
+    </div>
+
+    <div id="Algoritmo1" class="tabcontent">
+
+        <h2>Calcular valor total materias</h2>
+
+        <h3>Ingresar información de materias</h3>
+
+        <div>
+            A: <input type="text" id="nombreEstudiante">
+        </div>
+        <div>
+            B: <input type="number" id="cantidadMaterias">
+        </div>
+        
+        
+        <div>
+            <input type="button" value="Valor total" id="botonValorTotal">   
+        </div>
+        <div>
+            <p id="mostrarValorTotal"></p>
+        </div>
+        
+    
+    </div>
+
+    <div id="Algoritmo2" class="tabcontent">
+        
+        <h2>Calcular valor mayor y menor</h2>
+
+        <h3>Ingresar valores númericos</h3>
+
+        <div>
+            A: <input type="number" id="variableA">
+        </div>
+        <div>
+            B: <input type="number" id="variableB">
+        </div>
+        <div>
+            C: <input type="number" id="variableC">
+        </div>
+        <div>
+            D: <input type="number" id="variableD">
+        </div>
+        <div>
+            <input type="button" value="Calcular" id="botonCalcular1">   
+        </div>
+        <div>
+            <p id="resultado"></p>
+        </div>
+
+    </div>
+
+    
+    <script src="menu.js"></script>
+    <script src="algoritmo1.js"></script>
+    <script src="algoritmo2.js"></script>
+
+    
+</body>
+</html>
