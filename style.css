@@ -152,3 +152,25 @@ table.table .form-control.error {
 table.table td .add {
   display: none;
 }
+
+div{
+  border-radius: 5px;
+}
+.contenedorResultado{
+  width:100%;
+  height:100px;
+  display:flex;
+  justify-content: space-between;
+}
+.contenidoBotonResultado{
+  height:10px;
+  width:20%;
+  float:left;
+  margin: 10px;
+}
+.contenidoMensajeResultado{
+  height:10px;
+  width:100%;
+  float:left;
+  margin: 18px;
+}

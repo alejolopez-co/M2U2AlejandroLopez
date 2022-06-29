@@ -129,7 +129,9 @@ document.getElementById("botonValorTotal").addEventListener('click', function(ev
             }
             estudiante.nuevaMateria(materiaEstudiante, costoMateria);
         }
-        document.getElementById("mostrarValorTotal").innerHTML = `El valor total es ${estudiante.getValorTotalConDescuento()}`;
+        let valortotal = estudiante.getValorTotalConDescuento();
+        let valorTexto = valortotal.toLocaleString("es-CO", {style:"currency", currency:"COP"});
+        document.getElementById("mostrarValorTotal").innerHTML = `El valor total es <b>${valorTexto}</b>`;
     }
 
 });
