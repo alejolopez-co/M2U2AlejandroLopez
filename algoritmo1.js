@@ -54,7 +54,6 @@ function tieneValoresCorrectos(tablaMaterias, filaTabla, indexCelda) {
 
     switch (indexCelda) {
         case 0:
-            //let nombreEstudiante = filaTabla.cells[indexCelda].getElementsByTagName('input')[0].value;
             let nombreEstudiante = filaTabla.cells[indexCelda].innerText;
             if (nombreEstudiante === '' || nombreEstudiante === null)  {
                 document.getElementById("mostrarValorTotal").innerHTML = `ERROR: debe ingresar un estudiante válido`;
@@ -63,7 +62,6 @@ function tieneValoresCorrectos(tablaMaterias, filaTabla, indexCelda) {
             break;
 
         case 1:
-            //let materiaEstudiante = filaTabla.cells[indexCelda].getElementsByTagName('input')[0].value;
             let materiaEstudiante = filaTabla.cells[indexCelda].innerText;
             if (materiaEstudiante === '' || materiaEstudiante === null)  {
                 document.getElementById("mostrarValorTotal").innerHTML = `ERROR: debe ingresar una materia válida`;
@@ -89,6 +87,9 @@ function tieneValoresCorrectos(tablaMaterias, filaTabla, indexCelda) {
 
 document.getElementById("botonValorTotal").addEventListener('click', function(event) {
 
+    // Limpiar mensajes
+    document.getElementById("mostrarValorTotal").innerHTML = '';
+    
     let tablaMaterias = document.getElementById("tablaMaterias");
 
     if (tablaMaterias.rows.length > 2) {
@@ -96,12 +97,10 @@ document.getElementById("botonValorTotal").addEventListener('click', function(ev
         
         // Validación campo Estudiante
         if (!tieneValoresCorrectos(tablaMaterias, fila, 0)) {
-            //event.preventDefault();
             return false;
         }
 
 
-        //let nombreEstudiante = fila.cells[0].getElementsByTagName('input')[0].value;
         let nombreEstudiante = fila.cells[0].innerText;
         let estudiante = new Estudiante(nombreEstudiante, 4);
         let materiaEstudiante = '';
@@ -112,13 +111,11 @@ document.getElementById("botonValorTotal").addEventListener('click', function(ev
                 
                 // Validación campo Estudiante
                 if (!tieneValoresCorrectos(tablaMaterias, fila, index_2)) {
-                    //event.preventDefault();
                     return false;
                 }
 
                 switch (index_2) {
                     case 1:
-                        //materiaEstudiante = fila.cells[index_2].getElementsByTagName('input')[0].value;
                         materiaEstudiante = fila.cells[index_2].innerText;
                         break;
                     case 2:
